@@ -7,8 +7,7 @@ unzip(paste("data", destfile, sep="/"), exdir="data")
 data_dir <- setdiff(dir("data"), destfile)
 
 ## Read txt dataset
-dat <- read.csv("./data/household_power_consumption.txt", header=T, sep=';', na.strings="?",
-nrows=2075259, check.names=F)
+dat <- read.csv("./data/household_power_consumption.txt", header=T, sep=';')
 dat$Date <- as.Date(dat$Date, format="%d/%m/%Y")
 
 ## Subsetting the data
